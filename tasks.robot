@@ -40,6 +40,7 @@ Order robots from RobotSpareBin Industries Inc
          Go to order another robot
     END
     Create a ZIP file of the receipts
+    [Teardown]    Close the browser
 
 
 
@@ -103,3 +104,6 @@ Go to order another robot
 Create a ZIP file of the receipts
     ${zip_file_name} =    Set Variable    ${OUTPUT_DIR}${/}all_receipts.zip
     Archive Folder With Zip    ${OUTPUT_DIR}${/}receipt${/}    ${zip_file_name}
+
+Close the browser
+    Close Browser
